@@ -1,0 +1,56 @@
+.maps{
+    /* position: absolute; */
+        width: 1345px;
+        height: 525px;       
+    /* background: url('./Media/Maps.png');
+} */
+}
+.footer_container{
+    display: flex;
+    justify-content: space-around;
+}
+.address{
+    font-size: 45px;
+
+}
+.contact{
+    font-size: 45px;
+}
+.tel_nummer{
+    font-size: 45px;
+}
+.soc_netz{
+    display: flex;
+    /* margin-left: 30px; */
+    /* justify-content: space-around; */
+}
+
+.icon_instagram {
+    display: block;
+    height: 44px;
+    width: 44px;
+    background: url(./Media/Vector_instagram.svg);
+    margin-top: 20px;
+}
+.icon_whatsapp {
+    display: block;
+    height: 46px;
+    width: 46px;
+    background: url(./Media/Vector_whatsapp.svg);
+    margin-top: 18px;    
+}
+.working_time{
+    margin-top: 20px;
+    font-weight: 500px;
+    font-size: 18px;
+}
+.working_hours{
+    font-size: 24px;
+    font-weight: 600px; 
+    .time{
+
+    }
+    .hours{
+
+    }
+}

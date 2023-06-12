@@ -1,0 +1,14 @@
+.categories_btn {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+    padding-bottom: 20px;
+}
+
+.categories_title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #000000;
+}

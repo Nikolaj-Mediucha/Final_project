@@ -1,0 +1,8 @@
+.not_found{
+    position: absolute;
+        width: 1440px;
+        height: 625px;
+    
+        background: url('./Media/404.png');
+}
+
