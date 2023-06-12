@@ -1,0 +1,37 @@
+.prices {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    .current_price{
+        width: 65px;
+        height: 39px;
+        
+        
+    }
+
+}
+.link{
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    .button {
+        position: absolute;
+        display: none;
+        border: 2px solid #339933;
+        border-radius: 21px;
+        background-color: #f1fff1;
+        height: 72px;
+        left: 10px;
+        right: 10px;
+        bottom: 32px;
+    }
+
+    &:hover .button {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+

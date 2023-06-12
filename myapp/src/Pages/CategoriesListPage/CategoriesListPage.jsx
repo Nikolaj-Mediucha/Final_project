@@ -15,7 +15,7 @@ export default function CategoriesListPage() {
     <div>
       <h1>Categories</h1> 
         <div className={classes.container}>
-            {arr.map((item) => <CategoriesCard data={item}/> )}
+            {arr.map((item) => <CategoriesCard data={item} key={item.id}/> )}
         </div>
 
 

@@ -11,10 +11,14 @@ export default function Footer() {
         <div className={classes.footer_container}>
           <div className={classes.contact_container}>
             <h1 className={classes.contact}>Contact</h1>
-            <a title='+4915159993999' href="tel:+4915159993999" className={classes.contact}>+4915159993999</a>
+            <a title='+4915159993999' href="tel:+4915159993999" className={classes.telefon}>+4915159993999</a>
           <div className={classes.soc_netz}>
-            <a title='instagram' href='/'><i className={classes.icon_instagram}/>Instagram</a>
-            <a title='whatsapp' href='/'><i className={classes.icon_whatsapp}/>Whatsapp</a>
+            <a title='instagram' href='/'><i className={classes.icon_instagram}/>
+              <a className={classes.instagram}>Instagram</a>
+            </a>
+            <a title='whatsapp' href='/'><i className={classes.icon_whatsapp}/>
+              <a className={classes.whatsapp}>Whatsapp</a>
+            </a>
           </div>
         </div>
         <div className={classes.address_container}>
@@ -26,7 +30,7 @@ export default function Footer() {
 
         
       </div>
-      <img src={img} alt="maps" width={'100%'} height={'auto'}/>
+      <img src={img} alt="maps" width={'100%'} height={'auto'} className={classes.maps}/>
      
     </footer>
   )

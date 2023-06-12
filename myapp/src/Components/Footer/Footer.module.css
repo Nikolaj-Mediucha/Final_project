@@ -1,9 +1,12 @@
+.footer{
+    margin-top: 187px;
+}
 .maps{
-    /* position: absolute; */
-        width: 1345px;
-        height: 525px;       
-    /* background: url('./Media/Maps.png');
-} */
+
+        width: 100%;
+        height: 525px; 
+        margin-top: 47px;     
+       
 }
 .footer_container{
     display: flex;
@@ -15,12 +18,28 @@
 }
 .contact{
     font-size: 45px;
+    /* font-family: 'Montserrat'; */
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        color: #000000;
+        margin-bottom: 25px;
+        margin-left: 32px;
+        
 }
-.tel_nummer{
-    font-size: 45px;
+.telefon {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    color: #000000;
+    margin-left: 33px;
+    text-decoration: none;
+   
 }
+
 .soc_netz{
     display: flex;
+    /* margin-top: 32px; */
     /* margin-left: 30px; */
     /* justify-content: space-around; */
 }
@@ -30,14 +49,35 @@
     height: 44px;
     width: 44px;
     background: url(./Media/Vector_instagram.svg);
-    margin-top: 20px;
+    margin-top: 33px;
+    margin-left: 51px;
+    
+}
+.instagram {
+    margin-top: 11px;
+    margin-left: 33px;
+    font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #000000;
+        text-decoration: none;
 }
 .icon_whatsapp {
     display: block;
     height: 46px;
     width: 46px;
     background: url(./Media/Vector_whatsapp.svg);
-    margin-top: 18px;    
+    margin-top: 32px;
+    margin-left: 68px;    
+}
+.whatsapp{
+    margin-top: 10px;
+    margin-left: 34px;
+    font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        color: #000000;
+        text-decoration: none;
 }
 .working_time{
     margin-top: 20px;
