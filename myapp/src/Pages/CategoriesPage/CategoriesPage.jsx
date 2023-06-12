@@ -34,46 +34,48 @@ export default function CategoriesPage() {
     (!discont || item.discont_price)
   );
 
+  // const sortedList = filteredList.sort((a, b) => 
+
+  //   (a.price > b.price) ? 1 : (a.price < b.price) ? -1 : 0
+  // );
+
+
   const sortedList = filteredList.sort((a, b) => {
     // sortType == '0' ? 0 :
     // sortType == 
-    // (a.price < b.price) ? 1 :
+    // (a.price < b.price) ? 1 
     //   (a.price > b.price) ? -1
 
 
     // console.log(sortType);
     if (sortType === '0') {
-      // sort typy was not picked
       return 0;
     }
-
-    // min -> max
-    if(sortType === '1') {
- // a.price =1 b .b = 10
+    if (sortType === '1') {
       if (a.price < b.price) {
         return 1;
       }
-
       if (a.price > b.price) {
         return -1;
       }
-
       return 0;
       // TODO сократить с пом ? :
     }
-
+    if (sortType === '2') {
+      if (a.price > b.price) {
+        return 1;
+      }
+      if (a.price < b.price) {
+        return -1;
+      }
+      return 0;
+    }
     // поправить 1 кортировку
     // написать 2 остальные 
     // сделать мах кратко
     // почистить
     // a > b
-    return 1;
-
-    // a < b
-    // return -1
-
-    // a = b
-    // return 0;
+    // return 1;  
   });
   return (
     <div>
