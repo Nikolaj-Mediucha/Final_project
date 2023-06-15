@@ -12,9 +12,14 @@
     display: flex;
     justify-content: space-around;
 }
-.address{
+.address_title{
     font-size: 45px;
-
+    margin-bottom: 25px;
+}
+.address {
+    font-size: 45px;
+    color: black;
+    /* margin-top: 25px; */
 }
 .contact{
     font-size: 45px;
@@ -87,10 +92,8 @@
 .working_hours{
     font-size: 24px;
     font-weight: 600px; 
-    .time{
+    margin-bottom: 65px;
+    margin-top: 2px;
 
-    }
-    .hours{
-
-    }
+     
 }

@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 .filters{
     display: flex;
@@ -67,4 +68,11 @@
     margin-left: 30px;
     font-weight: 600;
 
+}
+.message{
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: 25%;
+    margin-top: 200px;
+   
 }

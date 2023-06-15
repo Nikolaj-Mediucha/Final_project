@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .title{
     text-align: center;
     font-size: 18px;
@@ -5,4 +8,17 @@
 }
 .container{
     margin-bottom: 20px;
+    
+   
+    
+}
+.container a{
+    /* width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+     */
+}
+.container img{
+    width: 300px;
+    height: auto;
 }

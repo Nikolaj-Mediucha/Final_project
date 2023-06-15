@@ -7,7 +7,7 @@ export default function CategoriesCard({data}) {
   return (
     <Link to={`/catalog/${data.id}`} className={classes.container}>
         
-        <img src={`http://localhost:3333${data.image}`} width='318' height='350'/>
+      <a href='#'><img src={`http://localhost:3333${data.image}`} /></a>
         <h3 className={classes.title}>{data.title}</h3>
                            
          

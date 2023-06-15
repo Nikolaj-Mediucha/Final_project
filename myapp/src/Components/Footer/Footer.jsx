@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={classes.address_container}>
-          <h2 className={classes.address}>Address</h2>
+          <h2 className={classes.address_title}>Address</h2>
           <a title='https://goo.gl/maps/9xi6HkbbZ1Ps7VkDA' href="https://goo.gl/maps/9xi6HkbbZ1Ps7VkDA" target='_blank' className={classes.address}>Karlsruher Str. 8, 74072 Heilbronn</a>
           <div className={classes.working_time}>Working Hours:</div>
           <div className={classes.working_hours}>24 hours a day</div>
