@@ -5,6 +5,7 @@ import Root from './Pages/Root/Root';
 import ErorPage from './Pages/ErorPage/ErorPage';
 import CategoriesListPage from './Pages/CategoriesListPage/CategoriesListPage';
 import ProductPage from './Pages/ProductPage/ProductPage';
+import BasketPage from './Pages/BasketPage/BasketPage';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "basket",
-        element: <div>Basket</div>,
+        element: <BasketPage/>,
       },
       {
         path: "*",

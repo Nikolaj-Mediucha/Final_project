@@ -27,6 +27,9 @@
    display: flex;
     
 }
+.basket{
+    display: flex;
+}
 .icon_basket{
     display: block;
     height: 30px;

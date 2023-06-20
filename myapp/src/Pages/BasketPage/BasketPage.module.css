@@ -1,0 +1,137 @@
+.basket_title{
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+}
+.title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 29px;
+    margin-top: 20px;
+    width: 318px;
+        height: 46px;
+}
+.itemImage{
+    width: 192.6px;
+    height: 166.64px;
+}
+.wrapper{
+    display: flex;
+}
+.backToStore{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 16px;
+    padding-left: 649px;
+    width: 824px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #A7A7A7;
+}
+
+.itemsInBasket{
+    display: flex;
+    margin-top: 34px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #A7A7A7;
+
+}
+.itemsAmount{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    /* line-height: 130%;     */
+    letter-spacing: 0.03em;
+    box-sizing: border-box;
+    display: flex;    
+    width: 140px;
+    height: 40px;
+    margin-left: 29px;
+    margin-top: 71px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}
+.order{
+box-sizing: border-box;
+
+    /* position: absolute; */
+    width: 496px;
+    height: 393px;
+    margin-left: 60px;
+    margin-top: 65px;
+    /* top: 298px; */
+
+    border: 2px solid #000000;
+    border-radius: 21px;
+}
+.orderTitle{
+    margin-left: 25px;
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+}
+.orderTotalContainer{
+    display: flex;      
+    
+}
+.orderTotal{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    margin-top: 47px;
+    margin-left: 25px;
+}
+.orderInput{
+    box-sizing: border-box;
+    
+        /* position: absolute; */
+        width: 446px;
+        height: 73px;
+        margin-left: 25px;
+        margin-top: 55px;
+        padding-left: 25px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+    
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        border-radius: 20px;
+}
+.totalOrderSum{
+    margin-left: 225px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 43px;
+}
+.orderSumSpan{
+    font-size: 15px;
+        font-weight: 600;
+}
+.orderButton{
+    display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 20px 185px 20px 143px;
+        gap: 10px;
+    
+        position: absolute;
+        width: 446px;
+        height: 76px;
+        margin-left: 25px;
+        margin-top: 25px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        color: #FFFFFF;
+        justify-content: center;
+        letter-spacing: 0.03em;
+    
+        background: #339933;
+        border-radius: 17px;
+}

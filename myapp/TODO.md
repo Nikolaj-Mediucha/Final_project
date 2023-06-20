@@ -1,6 +1,7 @@
 Вопросы 
 - React.useState (как создать / изменить)
 - React.useEffect
+- React context
 
 - js fetch (Asyn function)
 
@@ -8,6 +9,7 @@ Array
 - map
 - filter
 - sort
+- reducer
 
 
 Улучшения
