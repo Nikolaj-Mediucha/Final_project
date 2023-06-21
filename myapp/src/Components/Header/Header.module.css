@@ -3,6 +3,7 @@
     color: white;
     padding: 2px 10px ;  
     margin-left: 20px;
+    cursor: pointer;
 }
 .header{
     padding: 10px;
@@ -12,8 +13,7 @@
 }
 .actions_buttons{
     display: flex;
-    align-items: center;
-    
+    align-items: center;   
 
 }
 .icon_home{

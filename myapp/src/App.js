@@ -6,6 +6,7 @@ import ErorPage from './Pages/ErorPage/ErorPage';
 import CategoriesListPage from './Pages/CategoriesListPage/CategoriesListPage';
 import ProductPage from './Pages/ProductPage/ProductPage';
 import BasketPage from './Pages/BasketPage/BasketPage';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 const router = createBrowserRouter([
   {
@@ -39,9 +40,10 @@ const router = createBrowserRouter([
 
 
 function App() {
+  useLocalStorage();
   return (
     <div>
-     
+    
       <RouterProvider router={router} />
     </div>
   );
