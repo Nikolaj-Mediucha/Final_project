@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Routes, Route, useParams } from 'react-router-dom';
-import CategoriesCard from '../../Components/CategoiesCard/CategoriesCard';
 import classes from './CategoriesPage.module.css'
-import ProductCard from '../../Components/ProductCard/ProductCard';
+import ProductList from '../../Components/ProductList/ProductList';
+import { API_URL } from '../../сonstants/constants';
 
 
 export default function CategoriesPage() {
@@ -24,7 +24,7 @@ export default function CategoriesPage() {
   // const {priceFrom, priceTo, discont, sortType, data} = state;
 
   React.useEffect(() => {
-    fetch(`http://localhost:3333/categories/${category}`)
+    fetch(`${API_URL}/categories/${category}`)
       .then(response => response.json())
       .then(data => updateData(data));
   }, []);
@@ -117,8 +117,10 @@ export default function CategoriesPage() {
       </div>
 
       <div className={classes.container}>
-        {sortedList.length ?
-          filteredList.map((product) => <ProductCard data={product} key={product.id} />) : <h3 className={classes.message}>'Not found any product. Change filter'</h3>}
+        {sortedList.length 
+        ? <ProductList products={filteredList} />
+         : <h3 className={classes.message}>'Not found any product. Change filter'</h3>
+        }
       </div>
     </div>);
 }

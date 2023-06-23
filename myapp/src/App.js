@@ -7,12 +7,19 @@ import CategoriesListPage from './Pages/CategoriesListPage/CategoriesListPage';
 import ProductPage from './Pages/ProductPage/ProductPage';
 import BasketPage from './Pages/BasketPage/BasketPage';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import SalesProductsPage from './Pages/SalesProductsPage/SalesProductsPage';
+import ProductsListPage from './Pages/ProductsListPage/ProductsListPage';
+import HomePage from './Pages/HomePage/HomePage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
+      {
+        path: '',
+        element: <HomePage />
+      },
       {
         path: "catalog/:category",
         element: <CategoriesPage />,
@@ -26,8 +33,16 @@ const router = createBrowserRouter([
         element: <CategoriesListPage />,
       },
       {
+        path: "products",
+        element: <ProductsListPage />,
+      },
+      {
+        path: "sales",
+        element: <SalesProductsPage />,
+      },
+      {
         path: "basket",
-        element: <BasketPage/>,
+        element: <BasketPage />,
       },
       {
         path: "*",
@@ -43,7 +58,6 @@ function App() {
   useLocalStorage();
   return (
     <div>
-    
       <RouterProvider router={router} />
     </div>
   );

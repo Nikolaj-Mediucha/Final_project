@@ -2,12 +2,16 @@ import React from 'react'
 import classes from './BasketPage.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeAllProductById, updateAmountById } from '../../store/basket'
+import { API_URL } from '../../сonstants/constants';
 
 export default function BasketPage() {
   const [phone, updatePhone] = React.useState('');
   const itemsInBasket = useSelector((state) => state.basket)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
+  const getSumOfItems = (arr) => arr.reduce((sum, arrItem) => sum + (arrItem.price_dicount || arrItem.price) * arrItem.amount, 0);
+
+  const sumOfAllItems = useSelector((state) => getSumOfItems(state.basket))
 
   if (!itemsInBasket) {
     return 'Basket is empty'
@@ -18,7 +22,7 @@ export default function BasketPage() {
   }
 
   const sendOrder = () => {
-    fetch('http://localhost:3333/order/send', {
+    fetch(`${API_URL}/order/send`, {
       method: 'POST',
       body: JSON.stringify(
         {
@@ -29,12 +33,8 @@ export default function BasketPage() {
     }) // запрос к беку
       .then(response => response.json()) // преобразуем
       .then(data => {
-        // console.log(data);
         if (data.status === 'OK') {
           alert('Thank you for your order!')
-          // вывести сообщение 
-
-          // on success -> remove all items in basket + clear phone
         }
       });
 
@@ -73,7 +73,7 @@ export default function BasketPage() {
           <h3 className={classes.orderTitle}>Order Details</h3>
           <div className={classes.orderTotalContainer}>
             <p className={classes.orderTotal}>Total</p>
-            <p className={classes.totalOrderSum}>3077,00
+            <p className={classes.totalOrderSum}>{sumOfAllItems.toFixed(2)}
               <span className={classes.orderSumSpan}>$</span>
             </p>
           </div>

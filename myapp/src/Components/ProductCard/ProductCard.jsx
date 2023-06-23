@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import classes from './ProductCard.module.css'
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../../store/basket'
+import classes from './ProductCard.module.css'
 
 export default function ProductCard({ data }) {
   const dispatch = useDispatch();

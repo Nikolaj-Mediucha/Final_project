@@ -5,6 +5,7 @@ import classes from './Header.module.css';
 import Button from '../UI/Button/Button';
 
 const getAllItemsAmount = (arr) => arr.reduce((sum, arrItem) => sum + arrItem.amount, 0);
+
 export default function Header() {
   const navigate = useNavigate();
   const itemsInBasket = useSelector((state) => getAllItemsAmount(state.basket))
@@ -20,9 +21,9 @@ export default function Header() {
 
        
         <nav className={classes.nav}>
-          <Link to={'/catalog'} className={classes.link}>Main Page</Link>
-        <Link to={'/categories/all'} className={classes.link}>All products</Link>
-        <Link to={'/products/all'} className={classes.link}>All Sales</Link>
+          <Link to={'/'} className={classes.link}>Main Page</Link>
+        <Link to={'/products'} className={classes.link}>All products</Link>
+        <Link to={'/sales'} className={classes.link}>All Sales</Link>
           <Link className={classes.basket} to={'/basket'}>
             <i className={classes.icon_basket}/>
             {itemsInBasket ? <div className={classes.amount}>{itemsInBasket}</div> : null}
