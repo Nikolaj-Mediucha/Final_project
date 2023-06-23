@@ -21,11 +21,11 @@ export default function Header() {
        
         <nav className={classes.nav}>
           <Link to={'/catalog'} className={classes.link}>Main Page</Link>
-          <Link to={'/catalog/'} className={classes.link}>All products</Link>
-          <Link to={'/catalog/'} className={classes.link}>All Sales</Link>
+        <Link to={'/categories/all'} className={classes.link}>All products</Link>
+        <Link to={'/products/all'} className={classes.link}>All Sales</Link>
           <Link className={classes.basket} to={'/basket'}>
             <i className={classes.icon_basket}/>
-            {itemsInBasket ? <span>{itemsInBasket}</span> : null}
+            {itemsInBasket ? <div className={classes.amount}>{itemsInBasket}</div> : null}
           </Link>
         </nav>
       </header>

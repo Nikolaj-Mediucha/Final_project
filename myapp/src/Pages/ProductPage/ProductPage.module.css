@@ -30,8 +30,13 @@
                 font-size: 20px;
                
         }
+                .spanPrice {
+                    font-size: 25px;
+                    font-weight: 600;
+                }
                  .span {
-                     font-size: 10px;
+                     font-size: 15px;
+                     font-weight: 600;
                  }
         .discont{
             font-style: normal;
@@ -76,4 +81,8 @@
         font-size: 20px;
     }
 }
+/* .spanPrice{
+    font-size: 15px;
+    font-weight: 600;
+} */
     

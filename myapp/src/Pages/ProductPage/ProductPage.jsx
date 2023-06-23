@@ -32,10 +32,10 @@ export default function ProductPage() {
         </div>
         <div className={classes.info}>
           <div className={classes.price}>
-            <div className={classes.current_price}>{productData.price}$</div>
+            <div className={classes.current_price}>{productData.price}<span className={classes.spanPrice}>$</span></div>
             {productData.discont_price ? (
               <>
-                <div className={classes.discont_price}>{productData.discont_price}$</div>
+                <div className={classes.discont_price}>{productData.discont_price}<span className={classes.span}>$</span></div>
                 <div className={classes.discont}>-{Math.round(100 - (productData.discont_price / productData.price * 100))}%</div>
               </>) : ''}
           </div>

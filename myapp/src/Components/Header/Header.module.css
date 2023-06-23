@@ -29,6 +29,22 @@
 }
 .basket{
     display: flex;
+    .amount{
+        border: 1px solid green;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        color: aliceblue;
+
+        
+       
+     
+
+    }  
 }
 .icon_basket{
     display: block;

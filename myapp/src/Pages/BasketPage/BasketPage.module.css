@@ -35,15 +35,37 @@
     margin-top: 34px;
     padding-bottom: 45px;
     border-bottom: 1px solid #A7A7A7;
+    position: relative;
+    .price{
+        display: flex;
+        margin-left: 24px;
+        align-items: center;
+        .discont_price{
+            margin-left: 70px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+            letter-spacing: 0.03em;
+            text-decoration-line: line-through;
+            color: #8B8B8B;
+        }
+    }
     
     .button{
+        position: absolute;
+        top:15%;
+        right: 0;
         height: 15px;
-        margin-left: 44px;        
+        margin-left: 44px;    
+        border: none;   
     }
     .current_price{
         font-style: normal;
         font-weight: 600;
         font-size: 40px;
+        /* display: flex; */
+        /* justify-content: space-around; */
         .spanPrice{
             font-size: 20px;
             font-weight: 600;
@@ -65,8 +87,13 @@
     margin-top: 71px;
     border: 1px solid #000000;
     border-radius: 12px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    .amountButton{
+        border: none;
+        font-size: 30px;
+        background-color: white;
+    }
 }
 .order{
 box-sizing: border-box;
@@ -150,6 +177,6 @@ box-sizing: border-box;
 
     &:disabled {
         background: grey;
-        cursor: none;
+        cursor:not-allowed;
     }
 }

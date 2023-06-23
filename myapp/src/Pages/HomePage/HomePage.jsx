@@ -10,18 +10,13 @@ function HomePage() {
   return (
     <div>
       <Header/>
-      <div className='body??'>
+      <div className='body'>
          <h2 className={classes.categories_title}>Catalog</h2>
           <NavLink to={'/CategoriesListPage'}>
             <Button text='AllCategories' className='categories_btn' />
           </NavLink>
-        
-          {/* <DiscountContainer/> */}
-          {/* <SalesContainer/> */}
-
-
-
       </div>
+
       <Footer/>
     </div>
   )

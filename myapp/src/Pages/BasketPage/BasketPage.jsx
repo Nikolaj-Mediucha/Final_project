@@ -14,7 +14,7 @@ export default function BasketPage() {
   }
 
   const onAmountChange = (id, difference) => { //diff =  1 || -1
-    dispatch(updateAmountById({id, difference}))
+    dispatch(updateAmountById({ id, difference }))
   }
 
   const sendOrder = () => {
@@ -29,13 +29,14 @@ export default function BasketPage() {
     }) // запрос к беку
       .then(response => response.json()) // преобразуем
       .then(data => {
-        console.log(data);
+        // console.log(data);
         if (data.status === 'OK') {
+          alert('Thank you for your order!')
           // вывести сообщение 
-          
-    // on success -> remove all items in basket + clear phone
+
+          // on success -> remove all items in basket + clear phone
         }
-      }); 
+      });
 
   }
   return (
@@ -50,18 +51,18 @@ export default function BasketPage() {
               <div>
                 <h3 className={classes.title}>{item.title}</h3>
                 <div className={classes.itemsAmount}>
-                  <button className={classes.amountIcon} onClick={() =>onAmountChange(item.id, -1)}>-</button>
+                  <button className={classes.amountButton} onClick={() => onAmountChange(item.id, -1)}>-</button>
                   <span>{item.amount}</span>
-                  <button onClick={() => onAmountChange(item.id, 1)}>+</button>
+                  <button className={classes.amountButton} onClick={() => onAmountChange(item.id, 1)}>+</button>
                 </div>
               </div>
               <div className={classes.price}>
-                <div className={classes.current_price}>{item.price}
+                <div className={classes.current_price}>{item.discont_price ? item.discont_price : item.price}
                   <span className={classes.spanPrice}>$</span>
                 </div>
                 {item.discont_price ? (
                   <>
-                    <div className={classes.discont_price}>{item.discont_price}$</div>
+                    <div className={classes.discont_price}><s>{item.price}$</s></div>
                   </>) : ''}
               </div>
               <button className={classes.button} onClick={(e) => { dispatch(removeAllProductById(item.id)) }}>X</button>
@@ -76,7 +77,7 @@ export default function BasketPage() {
               <span className={classes.orderSumSpan}>$</span>
             </p>
           </div>
-          <input type="telefon" placeholder='Phone number' className={classes.orderInput} onChange={(e) => {updatePhone(e.target.value)}}/>
+          <input type="telefon" placeholder='Phone number' className={classes.orderInput} onChange={(e) => { updatePhone(e.target.value) }} />
           <button className={classes.orderButton} onClick={sendOrder} disabled={!phone.length || !itemsInBasket.length}>Order</button>
         </div>
       </div>
