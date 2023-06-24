@@ -2,6 +2,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
     display: flex;
+    margin-right: 65px;
     justify-content: space-between;
     .current_price{
         /* width: 65px;
@@ -60,7 +61,7 @@
 }
 .spanPrice{
     font-size: 15px;
-        font-weight: 600;
+    font-weight: 600;
 }
 
 

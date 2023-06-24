@@ -82,15 +82,15 @@ export default function CategoriesPage() {
       }
       return 0;
     }
-    if (sortType === '3') {
-      if (a.discont > b.discont) {
-        return 1;
-      }
-      if (a.discont < b.discont) {
-        return -1;
-      }
-      return 0;
-    }
+    // if (sortType === '3') {
+    //   if (a.discont < b.discont) {
+    //     return 1;
+    //   }
+    //   if (a.discont > b.discont) {
+    //     return -1;
+    //   }
+    //   return 0;
+    // }
   });
   return (
     <div>
@@ -111,7 +111,7 @@ export default function CategoriesPage() {
             <option value="0" selected>by default</option>
             <option value="1">price max to min</option>
             <option value="2">price min to max</option>
-            <option value="3">max discont</option>
+            {/* <option value="3">max discont</option> */}
           </select>
         </div>
       </div>
