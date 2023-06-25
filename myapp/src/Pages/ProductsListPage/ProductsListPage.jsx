@@ -7,7 +7,7 @@ export default function ProductsListPage() {
   const products = useProducts();
   return (
     <div>
-      <h1>All products</h1>
+      <h1 className={classes.h1}>All products</h1>
       {products.length ? (
         <ProductList products={products} />
       ) : 'No products'}
