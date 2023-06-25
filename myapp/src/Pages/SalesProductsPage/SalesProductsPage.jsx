@@ -5,7 +5,6 @@ import { useProducts } from '../../hooks/useProducts';
 export default function SalesProductsPage() {
   const products = useProducts();
   const filteredProducts = products.filter((item) => item.discont_price);
-
   return (
     <div>
       <h1>Sales</h1>

@@ -3,51 +3,46 @@ import classes from './BasketPage.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeAllProductById, updateAmountById } from '../../store/basket'
 import { API_URL } from '../../сonstants/constants';
+import { Link } from 'react-router-dom';
 
 export default function BasketPage() {
   const [phone, updatePhone] = React.useState('');
   const itemsInBasket = useSelector((state) => state.basket)
   const dispatch = useDispatch();
-
-  const getSumOfItems = (arr) => arr.reduce((sum, arrItem) => sum + (arrItem.price_dicount || arrItem.price) * arrItem.amount, 0);
-
+  const getSumOfItems = (arr) => arr.reduce((sum, arrItem) => sum + (arrItem.price_discont || arrItem.price) * arrItem.amount, 0);
   const sumOfAllItems = useSelector((state) => getSumOfItems(state.basket))
-
   if (!itemsInBasket) {
     return 'Basket is empty'
   }
-
-  const onAmountChange = (id, difference) => { //diff =  1 || -1
+  const onAmountChange = (id, difference) => {
     dispatch(updateAmountById({ id, difference }))
   }
-
   const sendOrder = () => {
     fetch(`${API_URL}/order/send`, {
       method: 'POST',
       body: JSON.stringify(
         {
-          phone: phone, // todo useSTate - update через input
+          phone: phone,
           basket: itemsInBasket
         }
       )
-    }) // запрос к беку
-      .then(response => response.json()) // преобразуем
+    })
+      .then(response => response.json())
       .then(data => {
         if (data.status === 'OK') {
           alert('Thank you for your order!')
         }
       });
-
   }
   return (
     <div >
       <p3 className={classes.basket_title}>Shopping cart</p3>
       <div className={classes.wrapper}>
         <div className={classes.container}>
-          <h3 className={classes.backToStore}>Back to the store</h3>
+          <Link to={'/'} className={classes.backToStore}>Back to the store</Link>
           {itemsInBasket.map((item) => (
             <div className={classes.itemsInBasket}>
-              <img src={`http://localhost:3333${item.image}`} className={classes.itemImage} />
+              <img src={`${API_URL}${item.image}`} className={classes.itemImage} />
               <div>
                 <h3 className={classes.title}>{item.title}</h3>
                 <div className={classes.itemsAmount}>

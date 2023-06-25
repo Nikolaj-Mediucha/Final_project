@@ -4,9 +4,7 @@
     display: flex;
     margin-right: 65px;
     justify-content: space-between;
-    .current_price{
-        /* width: 65px;
-        height: 39px;   */
+    .current_price{      
         font-style: normal;
         font-weight: 600;
         font-size: 30px;
@@ -25,7 +23,6 @@
         letter-spacing: 0.03em;
         color: #FF32A1;
     }
-
 }
 .link{
     position: relative;
@@ -43,7 +40,6 @@
         right: 10px;
         bottom: 32px;
     }
-
     &:hover .button {
         display: block;
         cursor: pointer;

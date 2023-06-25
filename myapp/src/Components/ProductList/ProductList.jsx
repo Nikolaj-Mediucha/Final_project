@@ -9,5 +9,4 @@ const PageList = ({ products }) => (
     ))}
   </div>
 );
-
 export default PageList;

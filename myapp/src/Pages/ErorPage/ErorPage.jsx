@@ -5,9 +5,6 @@ import NotFound from '../../Components/NotFound/NotFound'
 
 export default function ErorPage() {
   return (
-    
-        <NotFound/>
-   
-    
+    <NotFound />
   )
 }

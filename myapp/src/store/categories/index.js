@@ -7,7 +7,5 @@ export const categoriesSlice = createSlice({
     update: (state, action) => action.payload,
   },
 });
-
 export const { update } = categoriesSlice.actions;
-
 export default categoriesSlice.reducer;

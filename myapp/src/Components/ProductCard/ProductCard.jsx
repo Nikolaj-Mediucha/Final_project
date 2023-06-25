@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../../store/basket'
 import classes from './ProductCard.module.css'
+import { API_URL } from '../../сonstants/constants';
 
 export default function ProductCard({ data }) {
   const dispatch = useDispatch();
@@ -11,12 +12,10 @@ export default function ProductCard({ data }) {
     e.preventDefault();
     dispatch(addProduct(data));
   }
-
   return (
-
     <div className={classes.container}>
       <Link to={`/product/${data.id}`} className={classes.link}>
-        <img src={`http://localhost:3333${data.image}`} width="300" />
+        <img src={`${API_URL}${data.image}`} width="300" />
         <button className={classes.button} onClick={onAddToCardClick}>Add to cart</button>
       </Link>
       <div className={classes.prices}>
@@ -29,6 +28,5 @@ export default function ProductCard({ data }) {
       </div>
       <h3 className={classes.title}>{data.title}</h3>
     </div>
-
   )
 }

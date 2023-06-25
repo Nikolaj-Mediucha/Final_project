@@ -1,22 +1,20 @@
 import React from 'react'
-import {Link, useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import classes from './Footer.module.css'
 import img from './Media/Maps.png';
-
 
 export default function Footer() {
   return (
     <footer className={classes.footer}>
-      
-        <div className={classes.footer_container}>
-          <div className={classes.contact_container}>
-            <h1 className={classes.contact}>Contact</h1>
-            <a title='+4915159993999' href="tel:+4915159993999" className={classes.telefon}>+4915159993999</a>
+      <div className={classes.footer_container}>
+        <div className={classes.contact_container}>
+          <h1 className={classes.contact}>Contact</h1>
+          <a title='+4915159993999' href="tel:+4915159993999" className={classes.telefon}>+4915159993999</a>
           <div className={classes.soc_netz}>
-            <a title='instagram' href='/'><i className={classes.icon_instagram}/>
+            <a title='instagram' href='/'><i className={classes.icon_instagram} />
               <a className={classes.instagram}>Instagram</a>
             </a>
-            <a title='whatsapp' href='/'><i className={classes.icon_whatsapp}/>
+            <a title='whatsapp' href='/'><i className={classes.icon_whatsapp} />
               <a className={classes.whatsapp}>Whatsapp</a>
             </a>
           </div>
@@ -27,11 +25,8 @@ export default function Footer() {
           <div className={classes.working_time}>Working Hours:</div>
           <div className={classes.working_hours}>24 hours a day</div>
         </div>
-
-        
       </div>
-      <img src={img} alt="maps" width={'100%'} height={'auto'} className={classes.maps}/>
-     
+      <img src={img} alt="maps" width={'100%'} height={'auto'} className={classes.maps} />
     </footer>
   )
 }

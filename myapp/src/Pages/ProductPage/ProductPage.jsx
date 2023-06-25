@@ -9,20 +9,16 @@ export default function ProductPage() {
   const { productId } = useParams();
   const [data, updateData] = React.useState(null);
   const dispatch = useDispatch()
-
   console.log(data);
-
   React.useEffect(() => {
     fetch(`http://localhost:3333/products/${productId}`)
       .then(response => response.json())
       .then(data => updateData(data));
   }, []);
-
   if (!data) {
     return 'loading';
   };
   const productData = data[0]; // data[data.length - 1] 
-
   return (
     <div>
       <h1 className={classes.h1}>{productData.title}</h1>
@@ -42,7 +38,6 @@ export default function ProductPage() {
           <button className={classes.button} onClick={(e) => { dispatch(addProduct(productData)); }}>To cart</button>
           <div className={classes.description}>
             <p3 className={classes.description_title}>Description</p3>
-
             <p4 className={classes.description_text}>{productData.description}</p4>
           </div>
         </div>

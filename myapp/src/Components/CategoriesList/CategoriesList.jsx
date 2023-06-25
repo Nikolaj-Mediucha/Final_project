@@ -9,5 +9,4 @@ const CategoriesList = ({ categories }) => (
     ))}
   </div>
 );
-
 export default CategoriesList;

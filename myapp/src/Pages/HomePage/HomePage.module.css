@@ -1,145 +1,139 @@
 .categories_btn {
-    display: flex;
-    align-items: center;
-    gap: 96px;
-    padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 96px;
+  padding-bottom: 20px;
 }
-
 .categories_title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.saleContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  height: 600px;
+  margin-top: 50px;
+  border-radius: 13px;
+  background-color: #a1e2eb;
+  .saleDescription {
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+  .saleH1 {
     font-weight: 700;
-    font-size: 40px;
-    line-height: 130%;
-    letter-spacing: 0.03em;
-    color: #000000;
-}
-.saleContainer{
-    display: flex;
-    justify-content: space-between;
-    width: 1440px;
-    height: 600px;
-    top: 167px;
-    border-radius: 13px;
-    background-color: #a1e2eb;
-    .saleDescription{
-        margin-top: 100px;
-        margin-left: 50px;
-    }
-
-    .saleH1{
-        font-weight: 700;
-        font-size: 80px;
-        color: #ffffff;
-        margin-top: 30px;
-        }
-    .saleH2{
-        font-size: 63px;
-        font-weight: 700;
-        color: #ffffff;
-        margin-top: 40px;
-    }
-    .buttonSale{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 155px;
-        height: 82px;
-        background-color: #ffffff;
-        border-radius: 15px;
-        margin-top: 60px;
-    }
-    .button{
-        font-weight: 700;
-        font-size: 25px;
-        color: #2d2d2d;
-    }
-    .saleImage{
-        width: 700px;
-        height: 679px;
-        padding-bottom: 50px;
-        
-    }
-}
-.row{
-    display: flex;
-    align-items: center;
+    font-size: 80px;
+    color: #ffffff;
+    margin-top: 30px;
+  }
+  .saleH2 {
+    font-size: 63px;
+    font-weight: 700;
+    color: #ffffff;
     margin-top: 40px;
-    .allCategories{
-        display: flex;
-        border: 2px solid #8b8b8b;
-        color: #8b8b8b;
-        font-size: 12px;
-        font-weight: 700;
-        align-items: center;
-        width: 120px;
-        height: 31px;
-        margin-left: 50px;
-        justify-content: center;
-    }
-}
-.discontContainer{
+  }
+  .buttonSale {
     display: flex;
-    /* justify-content: space-around; */
-    width: 1440px;
-    height: 476px;
-    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
-    .discontImg{
-        margin-top: 30px;
-        margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+    height: 82px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    margin-top: 60px;
+  }
+  .button {
+    font-weight: 700;
+    font-size: 25px;
+    color: #2d2d2d;
+  }
+  .saleImage {
+    width: 700px;
+    height: 679px;
+    padding-bottom: 50px;
+  }
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  .allCategories {
+    display: flex;
+    border: 2px solid #8b8b8b;
+    color: #8b8b8b;
+    font-size: 12px;
+    font-weight: 700;
+    align-items: center;
+    width: 120px;
+    height: 31px;
+    margin-left: 50px;
+    justify-content: center;
+  }
+}
+.discontContainer {
+  display: flex;
+  /* justify-content: space-around; */
+  width: 1440px;
+  height: 476px;
+  background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+  .discontImg {
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+  .discontGet {
+    margin-left: 250px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    .h2 {
+      font-size: 90px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 108px;
     }
-    .discontGet{
-        margin-left: 250px;
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        .h2{
-            font-size: 90px;
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 108px;
-        }
-        .h3{
-            font-size: 50px;
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 50px;
-        }
-        .input{
-            width: 473px;
-            height: 75px;
-            border-radius: 25px;
-            margin-top: 30px;
-            padding-left: 30px;            
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 22px;
-            letter-spacing: 0.03em;
-            text-align: left;
-            color: #6c6c6c;
-        }
-        .getButton{
-            display: flex;
-           justify-content: center;
-            align-items: center;
-            width: 473px;
-            height: 75px;
-            border: 2px solid #ffffff;
-            cursor: pointer;
-            border-radius: 25px;
-            margin-top: 20px;            
-            font-size: 29px;
-            font-weight: 700;
-            line-height: 22px;
-            letter-spacing: 0.03em;
-            text-align: left;
-            color: #ffffff;
-            background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
-            &:disabled {
-                    background: grey;
-                    cursor: not-allowed;
-                }
-            
-        }
-
-        
+    .h3 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 50px;
     }
+    .input {
+      width: 473px;
+      height: 75px;
+      border-radius: 25px;
+      margin-top: 30px;
+      padding-left: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0.03em;
+      text-align: left;
+      color: #6c6c6c;
+    }
+    .getButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 473px;
+      height: 75px;
+      border: 2px solid #ffffff;
+      cursor: pointer;
+      border-radius: 25px;
+      margin-top: 20px;
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 22px;
+      letter-spacing: 0.03em;
+      text-align: left;
+      color: #ffffff;
+      background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+      &:disabled {
+        background: grey;
+        cursor: not-allowed;
+      }
+    }
+  }
 }

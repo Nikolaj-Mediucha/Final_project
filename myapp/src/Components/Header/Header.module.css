@@ -14,18 +14,15 @@
 .actions_buttons{
     display: flex;
     align-items: center;   
-
 }
-.icon_home{
-    
+.icon_home{    
     display: block;
     width: 72px;
     height: 72px;
     background: url(./media/icon_home.png);
 }
 .nav{
-   display: flex;
-    
+   display: flex;    
 }
 .basket{
     display: flex;
