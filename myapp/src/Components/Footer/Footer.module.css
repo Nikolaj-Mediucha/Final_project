@@ -58,14 +58,14 @@
 .icon_whatsapp {
     display: block;
     height: 46px;
-    width: 46px;
+    width: 45px;
     background: url(./Media/Vector_whatsapp.svg);
     margin-top: 32px;
     margin-left: 68px;    
 }
 .whatsapp{
     margin-top: 10px;
-    margin-left: 34px;
+    margin-left: 52px;
     font-style: normal;
     font-weight: 600;
     font-size: 15px;

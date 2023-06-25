@@ -11,10 +11,10 @@ export default function Footer() {
           <h1 className={classes.contact}>Contact</h1>
           <a title='+4915159993999' href="tel:+4915159993999" className={classes.telefon}>+4915159993999</a>
           <div className={classes.soc_netz}>
-            <a title='instagram' href='/'><i className={classes.icon_instagram} />
+            <a title='instagram' href='https://www.instagram.com' target='_blank'><i className={classes.icon_instagram} />
               <a className={classes.instagram}>Instagram</a>
             </a>
-            <a title='whatsapp' href='/'><i className={classes.icon_whatsapp} />
+            <a title='whatsapp' href='https://www.whatsapp.com' target='_blank'><i className={classes.icon_whatsapp} />
               <a className={classes.whatsapp}>Whatsapp</a>
             </a>
           </div>
