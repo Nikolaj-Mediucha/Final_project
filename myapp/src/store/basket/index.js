@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = JSON.parse(localStorage.getItem("BASKET") || "") || [];
+const initialState = JSON.parse(localStorage.getItem("BASKET")) || [];
 export const basketSlice = createSlice({
   name: "basket",
-  initialState,
+  initialState: [],
   reducers: {
     addProduct: (state, action) => {
       const productItem = state.find((item) => item.id === action.payload.id);
