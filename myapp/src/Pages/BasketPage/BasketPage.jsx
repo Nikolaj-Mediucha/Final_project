@@ -39,30 +39,34 @@ export default function BasketPage() {
       <p3 className={classes.basket_title}>Shopping cart</p3>
       <div className={classes.wrapper}>
         <div className={classes.container}>
-          <Link to={'/'} className={classes.backToStore}>Back to the store</Link>
-          {itemsInBasket.map((item) => (
-            <div className={classes.itemsInBasket}>
-              <img src={`${API_URL}${item.image}`} className={classes.itemImage} />
-              <div>
-                <h3 className={classes.title}>{item.title}</h3>
-                <div className={classes.itemsAmount}>
-                  <button className={classes.amountButton} onClick={() => onAmountChange(item.id, -1)}>-</button>
-                  <span>{item.amount}</span>
-                  <button className={classes.amountButton} onClick={() => onAmountChange(item.id, 1)}>+</button>
+          <div className={classes.header}>
+            <Link to={'/'} className={classes.backToStore}>Back to the store</Link>
+          </div>
+          <div className={classes.list}>
+            {itemsInBasket.length ? itemsInBasket.map((item) => (
+              <div className={classes.itemsInBasket}>
+                <img src={`${API_URL}${item.image}`} className={classes.itemImage} />
+                <div>
+                  <h3 className={classes.title}>{item.title}</h3>
+                  <div className={classes.itemsAmount}>
+                    <button className={classes.amountButton} onClick={() => onAmountChange(item.id, -1)}>-</button>
+                    <span>{item.amount}</span>
+                    <button className={classes.amountButton} onClick={() => onAmountChange(item.id, 1)}>+</button>
+                  </div>
                 </div>
-              </div>
-              <div className={classes.price}>
-                <div className={classes.current_price}>{item.discont_price ? item.discont_price : item.price}
-                  <span className={classes.spanPrice}>$</span>
+                <div className={classes.price}>
+                  <div className={classes.current_price}>{item.discont_price ? item.discont_price : item.price}
+                    <span className={classes.spanPrice}>$</span>
+                  </div>
+                  {item.discont_price ? (
+                    <>
+                      <div className={classes.discont_price}><s>{item.price}$</s></div>
+                    </>) : ''}
                 </div>
-                {item.discont_price ? (
-                  <>
-                    <div className={classes.discont_price}><s>{item.price}$</s></div>
-                  </>) : ''}
+                <button className={classes.button} onClick={(e) => { dispatch(removeAllProductById(item.id)) }}>X</button>
               </div>
-              <button className={classes.button} onClick={(e) => { dispatch(removeAllProductById(item.id)) }}>X</button>
-            </div>
-          ))}
+            )) : 'Basket is empty'}
+          </div>
         </div>
         <div className={classes.order}>
           <h3 className={classes.orderTitle}>Order Details</h3>

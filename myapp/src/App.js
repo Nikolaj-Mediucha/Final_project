@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./styles/reset.css";
 import "./App.css";
 import CategoriesPage from "./Pages/CategoriesPage/CategoriesPage";
 import Root from "./Pages/Root/Root";

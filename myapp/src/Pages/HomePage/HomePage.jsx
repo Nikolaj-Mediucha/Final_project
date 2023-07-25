@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import classes from './HomePage.module.css'
 import Button from '../../Components/UI/Button/Button'
 import { useCategories } from '../../hooks/useCategories';
 import { useProducts } from '../../hooks/useProducts'
@@ -9,6 +8,7 @@ import ProductList from '../../Components/ProductList/ProductList'
 import img from './Media/SaleImage.png';
 import image from './Media/image 3.png';
 import { API_URL } from '../../сonstants/constants';
+import classes from './HomePage.module.css'
 
 function HomePage() {
   const allCategories = useCategories();
@@ -38,10 +38,12 @@ function HomePage() {
           <h1 className={classes.saleH1}>Sale</h1>
           <h2 className={classes.saleH2}>New season</h2>
           <div className={classes.buttonSale}>
-            <NavLink to='/sales' className={classes.button}>Sale</NavLink>
+            <a href="#sale-page" className={classes.button}>Sale</a> 
+            {/* <NavLink to='#page-sale' classNa{classes.button}>Sale</NavLink> */}
+            {/* <NavLink to='/sales' className={classes.button}>Sale</NavLink> */}
           </div>
         </div>
-        <img src={img} alt="image" className={classes.saleImage} />
+        {/* <img src={img} alt="image" className={classes.saleImage} /> */}
       </div>
       <div className={classes.catalog}>
         <div className={classes.row}>
@@ -61,7 +63,7 @@ function HomePage() {
           <button className={classes.getButton} onClick={sendDiscountRequest} disabled={!phone}>Get a discount</button>
         </div>
       </div>
-      <div>
+      <div id='sale-page'>
         <h2 className={classes.categories_title}>Sale</h2>
         <ProductList products={salesProducts} />
       </div>

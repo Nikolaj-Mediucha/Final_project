@@ -14,11 +14,14 @@
 .saleContainer {
   display: flex;
   justify-content: space-between;
-  width: 1440px;
+  
   height: 600px;
   margin-top: 50px;
   border-radius: 13px;
   background-color: #a1e2eb;
+  background-image: url('./Media/SaleImage.png');
+  background-position: right 90%;
+  background-repeat: no-repeat;
   .saleDescription {
     margin-top: 100px;
     margin-left: 50px;
@@ -56,6 +59,7 @@
     padding-bottom: 50px;
   }
 }
+
 .row {
   display: flex;
   align-items: center;
@@ -73,19 +77,40 @@
     justify-content: center;
   }
 }
+
 .discontContainer {
   display: flex;
-  /* justify-content: space-around; */
-  width: 1440px;
-  height: 476px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10%;
+  min-height: 476px;
   background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+
+
   .discontImg {
-    margin-top: 30px;
-    margin-left: 100px;
+    text-align: center;
   }
+  @media (min-width: 920px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .discontImg {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+
+     .discontGet {
+      margin-top: 20px;
+      text-align: left;
+      max-width: 475px;
+     }
+  }
+
   .discontGet {
-    margin-left: 250px;
     margin-top: 50px;
+    flex-grow: 1;
+    text-align: center;
     display: flex;
     flex-direction: column;
     .h2 {
@@ -101,7 +126,6 @@
       line-height: 50px;
     }
     .input {
-      width: 473px;
       height: 75px;
       border-radius: 25px;
       margin-top: 30px;
@@ -117,7 +141,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 473px;
       height: 75px;
       border: 2px solid #ffffff;
       cursor: pointer;
